@@ -1,28 +1,27 @@
-#ifndef _HEADER_
-#define _HEADER_
+#ifndef DOGH
+#define DOGH
 
 /**
-  * struct dog - Dog attributes
-  * @my_dog.name: The name of the dog.
-  * @my_dog.age: The age of the dog.
-  * @my_dog.owner: The owner of the dog.
-  *
-  * Description: The attributes of a dog.
-  */
-struct dog
-{
-	char *my_dog.name;
-	float my_dog.age;
-	char *my_dog.owner;
-};
-
-/**
- * dog_t - Typedef for dog structure
+ * struct dog - a dog
+ *
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
  */
-typedef struct dog dog_t;
+typedef struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+} dog;
 
-void init_dog(struct dog *d, char *my_dog.name, float my_dog.age, char *my_dog.owner);
+typedef dog dog_t;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
-dog_t *new_dog(char *my_dog.name, float my_dog.age, char *my_dog.owner);
+dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
+
+int _putchar(char c);
+
 #endif
